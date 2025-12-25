@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VidyaSetu | You Did It!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f0f9ff; overflow-x: hidden; }
+        .celebration-card { 
+            background: white; 
+            border: 8px solid #e0f2fe; 
+            border-radius: 48px; 
+            box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.15);
+        }
+        .bounce-in { animation: bounceIn 0.8s cubic-bezier(0.36, 0, 0.66, -0.56) both; }
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: scale(0.3); }
+            50% { opacity: 1; transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .confetti-piece { position: absolute; width: 12px; height: 12px; border-radius: 2px; }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-6 relative">
+
+    <div class="absolute top-10 left-10 w-32 h-32 bg-blue-200 rounded-full opacity-30 blur-2xl"></div>
+    <div class="absolute bottom-20 right-10 w-48 h-48 bg-yellow-200 rounded-full opacity-30 blur-3xl"></div>
+
+    <div class="max-w-xl w-full text-center relative z-10 bounce-in">
+        
+        <div class="mb-6 relative inline-block">
+            <div class="w-36 h-36 bg-white rounded-full flex items-center justify-center text-7xl shadow-inner border-8 border-blue-50 relative z-10">
+                🥳
+            </div>
+            <span class="absolute -top-4 -right-4 text-4xl animate-pulse">✨</span>
+            <span class="absolute -bottom-2 -left-6 text-3xl animate-bounce">🌟</span>
+        </div>
+
+        <div class="celebration-card p-10 space-y-8">
+            <div>
+                <span class="bg-blue-100 text-blue-700 text-[10px] font-black px-4 py-2 rounded-full uppercase tracking-widest">Great Achievement!</span>
+                <h1 class="text-4xl font-black text-gray-900 mt-4 leading-tight">
+                    Fractions Master <br><span class="text-blue-600">Level 1 Complete!</span>
+                </h1>
+                <p class="text-gray-500 mt-4 font-medium text-lg">
+                    Anushka, aapne **Parts and Wholes** mein 10/10 score kiya hai!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-blue-50 p-5 rounded-[32px] border border-blue-100">
+                    <span class="text-2xl block mb-1">🪙</span>
+                    <p class="text-xs font-bold text-gray-400 uppercase tracking-tighter">Coins Won</p>
+                    <p class="text-2xl font-black text-blue-700">+250</p>
+                </div>
+                <div class="bg-orange-50 p-5 rounded-[32px] border border-orange-100">
+                    <span class="text-2xl block mb-1">⚡</span>
+                    <p class="text-xs font-bold text-gray-400 uppercase tracking-tighter">Energy XP</p>
+                    <p class="text-2xl font-black text-orange-600">450 pts</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-5 p-5 bg-gradient-to-r from-yellow-50 to-white rounded-3xl border-2 border-dashed border-yellow-200">
+                <div class="text-4xl">🍕</div>
+                <div class="text-left">
+                    <h4 class="font-extrabold text-gray-800 leading-none">Pizza Expert Badge</h4>
+                    <p class="text-xs text-gray-500 mt-1 italic">Unlocking advanced Fractions soon!</p>
+                </div>
+            </div>
+
+            <div class="grid gap-3 pt-4">
+                <button class="w-full py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-[24px] font-black text-lg shadow-xl shadow-blue-200 transition-all active:scale-95">
+                    Back to Dashboard 🏠
+                </button>
+                <button class="w-full py-3 text-blue-600 font-bold hover:underline">
+                    View My Progress Report 📈
+                </button>
+            </div>
+        </div>
+
+        <p class="text-gray-400 text-[10px] mt-8 font-black uppercase tracking-[0.2em]">Curriculum 2025-26 • VidyaSetu</p>
+    </div>
+
+</body>
+</html>
